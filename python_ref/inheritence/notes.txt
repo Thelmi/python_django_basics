@@ -1,0 +1,47 @@
+class Device:
+	def __init__(self, name, connectedBy):
+		self.name = name
+		self.connectedBy = connectedBy
+		self.connected = True
+
+	def __str__(self):
+		return f"Device: {self.name!r}, ({self.connected_by})"
+
+	def disconnected(self):
+		self.connected = False
+		print("Disconnected")
+
+class Printer(Device): // Printer inherting from Device
+	def __init__(self, name, connectedBy):
+		super().__init__(name, connectedBy) // calling the parent (super class)
+		
+class Device:
+	def __init__(self, name, connectedBy):
+		self.name = name
+		self.connectedBy = connectedBy
+		self.connected = True
+
+	def __str__(self):
+		return f"Device: {self.name!r}, ({self.connectedBy})"
+
+	def disconnected(self):
+		self.connected = False
+		print("Disconnected")
+
+class Printer(Device):
+	def __init__(self, name, connectedBy, capacity):
+		super().__init__(name, connectedBy)
+		self.capacity = capacity
+		self.remaining_pages = capacity
+	def __str__(self):
+		return f"{super().__str__()} ({self.remaining_pages} pages remaining)"
+	def print(self, pages):
+		if not self.connected:
+			print("Your printer is not connected")
+			return ;
+		print(f"Printing {pages} pages.")
+		self.remaining_pages -= pages
+		
+device = Device("vision", "hp printer")
+print(device)
+		

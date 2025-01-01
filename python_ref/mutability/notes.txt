@@ -1,0 +1,66 @@
+
+// same list, b is pointing and a which means
+	same id and changes affect both
+a = []
+b = a
+
+a.append(35)
+
+print(a)
+print(b)
+print(id(a))
+print(id(b)) 
+
+// now different both are different list
+
+a = []
+b = []
+
+a.append(35)
+
+print(a)
+print(b)
+print(id(a))
+print(id(b)) 
+
+// the fact that you can change a list after creating it
+
+// it means that list is mutable, in python everything is mutable because
+everything is an object unless there is noway of changing the properties
+itself
+
+a = ()
+b = ()
+
+a = a + (15,) // you will be creating a new tuple
+a.append(35) // tuples are not mutable so u will get an error
+
+print(id(a)) 
+print(id(b))
+
+// for example:
+
+a = ()
+print(f"before: {id(a)}") // different tuple
+a = a + (15,)
+print(f"after: {id(a)}") // different tuple
+
+// int mutability. if int are the same values it would have same id howeveer if you
+change one the other wont change
+
+
+a = 8597
+b = 8597
+
+print(id(a)) // same
+print(id(b)) // same
+
+a = 8598
+
+print(a) 8598 // different
+print(b) 8597 // different
+
+print(id(a)) // different
+print(id(b)) // different as well
+
+// almost everything in python is mutable, except int, typles, strings, and float

@@ -1,0 +1,43 @@
+
+// first use * to collect args
+def multiply(*args): // *args basically to put all args in a tuple
+	print(args)
+
+multiply(1, 2 , 3)
+
+// another use destracting values
+
+def add(x, y)
+	return x + y
+	
+nums = [3, 5]
+add(*nums) here we passed 3 and 5
+
+// another use you can use doube ** with dictionary. 
+so you can make a named arguement
+
+def add(x, y): // first param is x, second is y
+	print(f"x: {x}") 
+	print(f"y: {y}")
+	return x + y
+	
+nums = {'y': 15, 'x': 25}//  notice how x , y not in the same order
+add(**nums)
+
+// make sure, also when we call a parameter beside *arg like *arg it means it is a must to have a named arguement
+
+def multiply(*args):
+	total = 1
+	for arg in args:
+		total = total * arg
+	return (total)
+
+def apply(*args, operator):
+	if operator == "*":
+		return multiply(*args) // make sure to send each one separate
+	elif operator == "+":
+		return sum(args)
+	else:
+		"Not a valid operator"
+
+print(apply(1 , 3 , 4, 7, operator="*")) // operator is a named arguement and it was a must to a named one

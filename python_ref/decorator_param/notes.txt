@@ -1,0 +1,24 @@
+import functools
+user = {"username": "jose", "access_level": "guest"}
+
+def secure_get_admin(func):
+	@functools.wraps(func)
+	def secure_function(*args, **kwargs): // so we can send as much args as we want
+		if user['access_level'] == "admin":
+			return func(*args, *kwargs)
+		else:
+			return f"No admin permissions for {user['username']}"
+	return secure_function
+
+@secure_get_admin
+def get_admin_password(panel):
+	if panel == "admin":
+		return "1234"
+	elif panel == "billing":
+		return "super_secure_password"
+
+print(get_admin_password("billing")) 
+
+// what if we wanna return different func for user and admin
+currently using make secure is just for the function that used
+for admin however we can add another decorator 

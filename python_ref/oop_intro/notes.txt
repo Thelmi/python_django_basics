@@ -1,0 +1,28 @@
+// a normal function that calculate the average
+
+student = {"name": "Rolf", "grades": (89,  90, 93, 78, 90)}
+
+def average(sequence):
+	return sum(sequence) / len(sequence)
+print(average(student["grades"]))
+
+// oop version
+
+class Student:
+	def __init__(self): // similar to constractor
+		self.name = "Taha"
+		self.grades = (89,  90, 93, 78, 90)
+		
+	def average(self): // all methods should have a paramater
+		return sum(self.grades) / len(self.grades)
+		
+		
+
+student = Student()
+
+print(student.name)
+print(student.grades)
+print(student.average())
+
+// the methods && init function can both have more than one arguement
+

@@ -1,0 +1,25 @@
+when we wanna add css or javascript content
+without being influenced by python then 
+it basically not changing by it
+front end team prepare that code and 
+attach it to html is in static
+
+/*
+	again Django will look into such a
+	static folder this folder should hold 
+	all the static folders needed by ur folder
+	do app name folder because all of them, will 
+	get merge same like in templates
+	a good practice is to have sub sub folders
+	as styles and scripts
+	it wont be auto injected in our django file
+	
+	Now django template language
+	
+	you can let django figuere out the URL 
+	without hard coding the file in html
+
+	{% static 'meetups/styles/base.css' %}
+	and then above to unlock it 
+	{% load static %}
+*/

@@ -1,0 +1,52 @@
+
+x = 4;  so pyhon what it does it register 4 somewhere 
+		in the memory after that it will be refered to
+		as x
+		there is values that has been already created
+		-5 to 255;
+
+price = 9.99 this will be considered as a float
+
+x = 15
+
+price = 9.99
+
+discount = 0.2
+
+result = price * (1 - discount)
+
+print(result)
+
+the result will be 7.992000000000001
+because of float precise errors
+
+A string:
+
+name = "Rolf"
+
+u can re assign as well
+
+name = "BOB"
+
+if you wrote name *= 2
+
+its like saying name + name basically (strjoin)
+
+
+name = "Rolf"
+
+print(name);
+
+name = "taha"
+print(name * 2);
+
+a = 25
+
+b = a
+
+print(b) // b same as a
+
+b = 100
+
+print("b:", b, sep=' ') // b changed
+print("a:", a, sep=' ') // a didnt change

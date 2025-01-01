@@ -1,0 +1,36 @@
+
+
+// this is the bad exmple 
+class Student:
+	def __init__(self, name: str, grades: List[int] = []): #this is bad
+		self.name = name
+		self.grades = grades
+		
+	def take_exam(self, result: int):
+		self.grades.append(result)
+
+bob = Student("Bob")
+bob.take_exam(90)
+print(bob.grades) // they will be the same
+print(rolf.grades) // they will be the same 
+
+// what you can do is 
+
+from typing import List, Optional
+
+class Student:
+	def __init__(self, name: str, grades: Optional[List[int]] = None):
+		self.name = name
+		self.grades = grades or [] // it will be either grades or empty
+		
+	def take_exam(self, result: int):
+		self.grades.append(result)
+
+bob = Student("Bob")
+bob.take_exam(90)
+print(bob.grades)
+
+name: A string representing the student's name.
+grades: An optional list of integers representing grades. If no value is provided, it defaults to None.
+self.grades = grades or []:
+If grades is None, it assigns an empty list ([]) to self.grades. This avoids having None as the default value, which would cause errors when trying to append grades.

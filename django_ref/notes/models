@@ -1,0 +1,16 @@
+class representatio of the data you will
+be dealing with
+
+and then for each Model, Django will
+automatically create a database
+table where you can store
+the concrete instances of that Model
+and it will give you commands 
+
+update them,
+delete them
+query them
+order them
+
+and no sql code 
+which you have to write

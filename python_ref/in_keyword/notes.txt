@@ -1,0 +1,45 @@
+friends = ["Rolf", "Bob", "Jen"]
+
+print("Jen" in friends)
+
+check if Jen in the list
+
+movies_watched = {"The Matrix", "Green Book", "Her"}
+user_movie = input("Enter something you've watched recently: ")
+
+print(user_movie in movies_watched)
+
+movies_watched = {"The Matrix", "Green Book", "Her"}
+user_movie = input("Enter something you've watched recently: ")
+
+if user_movie in movies_watched:
+	print(f"I've watched {user_movie} too!")
+else:
+	print("I haven't watched that yet.")
+	
+
+
+number = 7
+
+user_input = input("Enter 'y' if you would like to play: ")
+
+if user_input in ("y", "Y"): // instead of .tolower()
+	user_number = int(input("Guess our number: "))
+	if user_input == 7:
+		print("Horray")
+	else:
+		print("OMG")
+		
+		
+number = 7
+
+user_input = input("Enter 'y' if you would like to play: ")
+
+if user_input in ("y", "Y"):
+	user_number = int(input("Guess our number: "))
+	if user_input == 7:
+		print("Horray")
+	elif number - user_number in (1, -1):
+		print("you were off by one.")
+	else:
+		print("OMG")

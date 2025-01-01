@@ -1,0 +1,6 @@
+// include any snippet using this
+{% include 'meetups/includes/meetup-item.html' %}
+
+// using with to make pass value to the args value...
+
+{% include 'meetups/includes/meetup-item.html' with title=meetup_item.title location=meetup_item.location %}

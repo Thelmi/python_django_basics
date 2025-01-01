@@ -1,0 +1,11 @@
+
+// def param is just in case you didnt give an arguement
+
+def circle_perimeter(r, y=3.14):
+	perimeter = 2 * y * r
+	print(f"{perimeter:.2f}")
+	
+circle_perimeter(5)
+
+using default to change a variable is not
+recomended

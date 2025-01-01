@@ -1,0 +1,64 @@
+// if we dont have init function
+it will build the function but it initialize nothing
+however self is stil created and you can do an object
+
+class ClassTest:
+	def instance_method(self): // it has only the self, obj bec of that its called an
+								instance method
+		print(f"Called instance_method of {self}")
+		
+test = ClassTest() 
+test.instance_method() // you can use it like this or 
+
+ClassTest.instance_method(test) // however you need an object (instance)
+
+// classmethod: you can call it without the need of an object
+
+class ClassTest:
+	def instance_method(self):
+		print(f"Called instance_method of {self}")
+		
+	@classmethod // u need to identify a class method
+	def class_method(cls):
+		print(f"Class class_method of {cls}")
+			
+		
+ClassTest.class_method()
+
+// static method
+
+@staticmethod
+	def static_method(): // takes no paranmeters
+		print("Callled static_method.")
+		
+// it is just a function (method) in a class, it has no info on
+the class whatsover 
+
+// class properties, variable that you think only the class is going to use it
+//  or to be more organized, class methods can use the class properties
+
+class Book:
+	Types = ("Hard cover", "PaperCover")
+	
+	def __init__(self, name, bookType, weight):
+		self.name = name 
+		self.bookType = bookType
+		self.weight = weight
+		
+	def __repr__(self):
+		return f"<name: {self.name}, bookType: {self.bookType}, weight: {self.weight}g>"
+	
+	@classmethod
+	def hardware(cls, name, pageWeight):
+		return cls(name, cls.Types[0], pageWeight + 100)
+	
+	@classmethod
+	def papercover(cls, name, pageWeight):
+		return cls(name, cls.Types[1], pageWeight)
+		
+tahaHardware = Book.hardware("lean startup", 200)
+tahaPapercover = Book.papercover("zero to ten", 200)
+
+print(tahaHardware)
+print(tahaPapercover)
+		

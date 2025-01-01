@@ -1,0 +1,10 @@
+
+sequence = [1, 3, 5, 9]
+
+doubled = list(map(lambda x: x * 2, sequence))
+print(doubled) 
+
+// lambda functions are not recomended... 
+	also x is the arguement and what is after : is the return 
+	only one line functions, no name (anonymous)
+	

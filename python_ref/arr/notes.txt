@@ -1,0 +1,40 @@
+l = ["Bob", "Rolf", "Anne"]
+
+list you can add and  remove from a list
+
+t = ("Bob", "Rolf", "Anne")
+
+you cant add or remove from a tuple
+
+s = {"Bob", "Rolf", "Anne"}
+
+same as a list but you cant have a double in set
+also set not necessary keep the order
+
+l = ["Bob", "Rolf", "Anne"]
+
+t = ("Bob", "Rolf", "Anne")
+
+s = {"Bob", "Rolf", "Anne"}
+
+print(l[0]) // lists
+
+print(t[0]) // tubles
+
+//
+
+l = ["Bob", "Rolf", "Anne"]
+
+t = ("Bob", "Rolf", "Anne")
+
+s = {"Bob", "Rolf", "Anne"}
+
+l.append("hero") add
+
+l.remove("hero") remove
+
+s.add("hero") // adding for set
+
+ s.add("hero")       /// you cant add it twice
+s.remove("hero") // remove for set
+print(l)

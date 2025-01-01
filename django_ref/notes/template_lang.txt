@@ -1,0 +1,16 @@
+
+Dynamic content
+/*
+	we have a meetups variable which hold
+	a list of dictionary
+	third arguement to the render function
+	:a dictionary 
+	choose any key of choise and then choose any value that
+	can be accessible into the template
+	under the key name
+	use double curly braces
+	<h2>{{meetups.0.title}}<h2/>
+	in template language you use . to access 
+	for if use {% if show_meetups%}
+	{% endif %} // you must end it
+*/

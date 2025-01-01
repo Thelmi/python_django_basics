@@ -1,0 +1,24 @@
+templates allow us to pre-define HTML files
+which we can then enrich with dynamic data
+with the help of out python code... our Django code. it can be helpful
+in loading data... for now, we learning about static template
+which has nothing to do with static
+data
+
+/*
+	The folder should be named templates
+	because it is called like that in settings of
+	the project. create a folder with the name of the app
+	and make in the template folder, what django will do 
+	behind the scenes that will take all the templates from
+	your apps and merge them to a giant template folder so
+	and if you didnt add your app name as sub folder, you there
+	for can have clashes, if you have multiple apps with templates
+	similar name
+	what render will do is it will create a HTTP response behind the scenes
+	but a response configured to returnd a rendered, which means a prepared
+	template because I mentioned that templates can also have dynamic data injected
+	render needs two arguements
+	the arguement and the path to templates
+	template is not considered in the path
+*/

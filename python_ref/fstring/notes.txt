@@ -1,0 +1,48 @@
+name = "Bob"
+
+greeting = "Hello, Bob"
+
+print(greeting); // printed Hello, Bob
+
+name = "Rolf"
+
+print(greeting) // Hello, Bob
+
+
+
+name = "Bob"
+
+greeting = f"Hello, {name}"
+
+print(greeting); // printed Hello, Bob
+
+name = "Rolf"
+
+print(greeting) // printed Hello, Bob // same result like above
+
+// you can do this instead
+
+name = "Bob"
+
+
+print(f"Hello, {name}"); // printed Hello, Bob
+
+name = "Rolf" // printed Hello, Rolf
+
+print(f"Hello, {name}") 
+
+// template and string formatting
+
+name = "Bob"
+greeting = "Hello, {}"
+
+with_name = greeting.format(name)
+
+print(greeting.format("harley"))
+
+
+longer_phrase = "Hello, {}. Today is {}."
+
+formatted = longer_phrase.format("Taha", "Tuesday") // you can even do this
+
+print(formatted)

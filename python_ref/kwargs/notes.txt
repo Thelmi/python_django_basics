@@ -1,0 +1,40 @@
+
+// keyword, collect named args
+
+def named(**kwargs): 
+	print(kwargs) // prints a dictionary {'name': 'Bob', 'age': 25}
+
+named(name="Bob", age=25)
+
+// we use it because simply we cant just send it, while we have two parameters
+
+def named(name, age):
+	print(name ,age)
+
+details = {"name": "Bob", "age": 25}
+
+// named(details) //!! a mistake since we cant use one arguement while we are having two paramaters
+// named(details, 25) // its correct however its weird, why would u send name as a dictionary so its better to
+						destructed
+// named(**details) // a great idea to use it here
+
+
+// read this section of code and try to understand it
+def named(name, age):
+	print(name ,age)
+
+def print_nicely(**kwargs):
+	named(**kwargs)
+	for arg, value in kwargs.items():
+		print(f"{arg}: {value}")
+
+
+print_nicely(name="Bob", age=25)
+
+// *arg to take all the positional, **kwars takes all the named ones
+
+def both(*args, **kwargs):
+	print(args)
+	print(kwargs)
+	
+both(1, 3, 5, name="Bon", age = 25)

@@ -1,0 +1,29 @@
+friends = {"Bob", "Rolf", "Anne"}
+abroad = {"Bob", "Anne"}
+
+local_friends = friends.difference(abroad) // if you did opposite like abroad.differece(friends) it will give empty
+	returns difference		         		set bec its smaller
+
+print(local_friends) // print Rolf
+
+
+
+local = {"Bob","Jen" ,"Rolf", "Charlie"}
+abroad = {"Bob", "Jen", "Adam", "Anne"}
+
+
+friends = local.union(abroad) 
+
+// return an concatinated set no doubles
+print(friends)
+
+// the opposite 
+
+
+local = {"Bob","Jen" ,"Rolf", "Charlie"}
+abroad = {"Bob", "Jen", "Adam", "Anne"}
+
+
+friends = local.intersection(abroad)
+return the ones in common
+print(friends)

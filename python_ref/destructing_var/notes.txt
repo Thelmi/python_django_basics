@@ -1,0 +1,48 @@
+// destruction
+t = 4, 5
+
+x, y = t
+
+print(x, y)
+
+// or destruction
+
+x, y = 4, 5
+
+print(x, y)
+
+people = [
+
+("Bob", 42, "Mechanic"), 
+("James", 24, "Artist"),
+("Harry", 32, "Lecturer")
+
+]
+
+for name, age, profession in people:
+	print(f"Name: {name}, Age: {age}, Profession: {profession}")
+
+// a variable meant to be ignored, python community agreed
+on _ being ignored\
+
+person = ("Bob", 42, "Mechanic")
+
+name, _ , profession = person
+
+print(name, profession);
+
+// taking one for a vriable and the rest for a list
+
+head, *tail = [1, 2 , 3, 4, 5]
+
+print(head)
+print(tail)
+
+u can do this instead
+
+*head, tail = [1, 2 , 3 , 4 , 5]
+
+print(head)
+print(tail)
+
+* means collect all variables as possible

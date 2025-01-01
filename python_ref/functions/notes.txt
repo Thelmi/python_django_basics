@@ -1,0 +1,27 @@
+
+def hello(): // here first to define function
+	print("Hello") // and then come back here
+
+hello() // second it calls it
+
+def years_to_sec():
+	user_age = int(input("How old are you? "))
+	age_in_sec = user_age * 365 * 24 * 60 * 60
+	print(f"Your age is {age_in_sec} seconds");
+
+years_to_sec()
+
+// never repeat names in functions
+// dont repeat variable names in global and local
+
+// another good example
+
+def add_friend():
+	friend_name = input("Enter your new friend name ")
+	friends_list = friends + [friend_name]
+	print(friends_list)
+
+friends = ["Rolf", "Bob"]
+
+	
+add_friend()

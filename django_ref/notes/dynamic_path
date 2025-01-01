@@ -1,0 +1,15 @@
+// for dynamic_path in urls
+
+path(meetups/<slug:meetup_slug>)
+slug keyword... give rules to the path
+<> to make it dynamic
+
+// in view 
+def meetup_details(request, meetup_slug):
+
+// using url keyword 
+
+path("meetups/<slug:meetup_slug>/", views.meetup_details, name='meetup-detail') // third parameter for path
+
+and then use 'URL keyword'
+<a href="{% url 'meetup-detail' meetup_item.slug %}" class="btn">More Details</a>

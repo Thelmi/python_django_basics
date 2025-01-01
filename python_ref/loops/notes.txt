@@ -1,0 +1,41 @@
+
+wining = 5
+
+while True:
+	response = input("Do you wanna play? ")
+	if response not in ('y' , 'Y'):
+		break;
+	number = input("Choose a number: ")
+	if int(number) == wining:
+		print("Bingo!")
+		break;
+	elif abs(int(number) - wining) == 1:
+		print(f"{number} so close... try again")
+	else:
+		print("oops, try again")
+		
+// for loops
+
+list = ["Taha", "MAAZ", "7o", "Khaled"]
+
+for l in list:
+	print(f"{l}")
+	
+
+for the range
+
+list = ["Taha", "MAAZ", "7o", "Khaled"]
+
+for i in range(3):
+	print(f"{i}")
+	
+grades = [35, 67, 98, 100, 100]
+
+total = sum(grades) // either this 
+
+amount = len(grades)
+
+# for grade in grades: // or this
+# 	total += grade
+	
+print(total / amount)

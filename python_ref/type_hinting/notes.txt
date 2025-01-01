@@ -1,0 +1,29 @@
+def list_avg(sequence):
+	return sum(sequence) / len(sequence)
+	
+list_avg(123) // this is wrong but nothing can show you that its wrong
+
+// thats why its recomended to use type hinting
+
+def list_avg(sequence: list) ->  float: // this tell that the param will be list and the function will return a float
+	return sum(sequence) / len(sequence)
+
+// what is more recomended
+
+from typing import List
+
+def list_avg(sequence: List) -> float:
+	return sum(sequence) / len(sequence)
+	
+// type hint with classes
+
+from typing import List
+
+class Book:
+	pass
+
+class BooksShelf:
+	def __init__(self, books: List[Book]): -> "BooksShelf" // put it as if its a string if you will return the same class u r in
+		self.books = books
+	def __str__(self) -> str:
+		return f"BookShelf with {len(self.books)} books."

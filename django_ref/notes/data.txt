@@ -1,0 +1,54 @@
+
+
+
+// not official clasification of data
+// howver make sense
+// so what is Data ?
+
+/*
+	there are three types of data.
+	
+	Temperory Data
+	Semi-Persistent Data
+	Persistent Data
+
+*/
+Temporary data: is the data user entered into an input field
+	in other words its some data which matters at a specific moment
+	but which ultimitly will be lost
+	if a user enters something into an unput field
+	once this form is submitted that data might be stored in a database
+	but the data in the input field will probably be reset
+/*
+	User input. 
+	Selected Blog post.
+	
+	Data is used and immediately and lost thereafter
+	store in Memory (variables)
+*/
+Semi-persistent Data: If you log in, and then reload it shouldnt be lost
+	but ofc at some point you might be locked out automatically and if 
+	that log in status is forgotten or lost,, its not the end
+	of the world. because you can easily receate it by logging in again
+/*
+	User Authentication status
+	Data is stored for a longer time but may be lost
+	(can be receated)
+	stored in Browser, Temporary Files 
+	(storages like, cookies, local storage, or with help of a session)
+*\
+
+in other world, Semi-persistent Data: can be persistent, but at
+some point it will be cleared, it could be cleared accidently
+and it can easily be restored
+
+Persistent Data: should not be lost
+
+/*
+e.g
+	Users which you stored in your database,
+	or to product on an online shop, or the
+	blog posts on online shop.
+	(Data is stored forever and must not be lost)
+	(store in a Database)
+*/

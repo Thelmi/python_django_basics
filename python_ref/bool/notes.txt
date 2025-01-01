@@ -1,0 +1,15 @@
+
+print(5 == 5) True
+
+print(5 > 5) False
+
+friends = ["Rolf", "Bob"]
+
+abroad = friends // shallow copy
+
+print(friends == abroad) // true
+print(friends is friends) // true
+
+== they are the same
+
+is are they on the same address

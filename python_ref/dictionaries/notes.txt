@@ -1,0 +1,50 @@
+
+//  dictionary
+friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
+
+
+friend_ages["Bob"] = 20
+friend_ages["Rolf"] = '50'
+print(friend_ages)
+print(friend_ages["Bob"])
+
+// list of dictionary
+
+friends = [
+	{"name": "Rolf", "age": 24},
+	{"name": "Adam", "age": 30},
+	{"name": "Rolf", "age": 27}
+]
+
+print(friends[1]["name"])
+print(friends)
+
+// printing
+
+student_attendance = {"Rold": 96, "Bob": 80, "Anne": 100}
+
+for student in student_attendance:
+	print(f"{student}: {student_attendance[student]}") // either this
+	
+// items()
+student_attendance = {"Rold": 96, "Bob": 80, "Anne": 100}
+
+for student, attendance in student_attendance.items(): // or this
+	print(f"{student}: {attendance}")
+	
+// in keyword
+
+student_attendance = {"Rold": 96, "Bob": 80, "Anne": 100}
+
+if "Anne" in student_attendance: // search only using keywords
+	print("She is a student")
+else:
+	print("who is she")
+	
+average values:
+
+student_attendance = {"Rold": 96, "Bob": 80, "Anne": 100}
+
+student_values = student_attendance.values()
+
+print(sum(student_values) / len(student_attendance))

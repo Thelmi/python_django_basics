@@ -1,0 +1,71 @@
+//  It’s a very Pythonic way to modify the behavior of functions without changing their code.
+
+user = {"username": "jose", "access_level": "guest"}
+
+def get_admin_password():
+	return "1234"
+
+
+def secure_get_admin(func):  // this is the decorator function, that takes another function 
+	def secure_function():
+		if user['access_level'] == "admin":
+			return func()
+		else:
+			return f"No admin permissions for {user['username']}"
+	return secure_function
+
+get_admin_password = secure_get_admin(get_admin_password) // and here is applying the decorator
+
+print(get_admin_password())
+
+// !! another way to do it using '@'
+
+user = {"username": "jose", "access_level": "guest"}
+
+def secure_get_admin(func):
+	@functools.wraps(func) // The name doesnt change of
+	def secure_function():
+		if user['access_level'] == "admin":
+			return func()
+		else:
+			return f"No admin permissions for {user['username']}"
+	return secure_function
+
+@secure_get_admin // if you used the @ before the def func then it will pass the function into the decorator directly
+def get_admin_password():
+	return "1234"
+
+print(get_admin_password().__name__) // keep in mind that the name changes of the function in case you dont have
+									  the @functools.wraps, if you have it above the inner def function then the name
+										won't change
+// another example
+
+import functools
+user = {"username": "jose", "access_level": "guest"}
+
+def secure_get_admin(access_level):
+	def decorator(func):
+		@functools.wraps(func)
+		def secure_function(*args, **kwargs):
+			if user['access_level'] == access_level:
+				return func(*args, *kwargs)
+			else:
+				return f"No {access_level} permissions for {user['username']}"
+		return secure_function
+	return decorator
+
+@secure_get_admin("admin")
+def get_admin_password():
+		return "1234"
+
+@secure_get_admin("user")
+def get_dashboard_password():
+	return "user: user_password"
+
+print(get_admin_password())
+print(get_dashboard_password())
+
+user = {"username": "jose", "access_level": "user"}
+
+print(get_admin_password())
+print(get_dashboard_password())

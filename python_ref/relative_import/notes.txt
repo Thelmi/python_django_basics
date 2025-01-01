@@ -1,0 +1,18 @@
+// utils.py
+
+def divide(dividend, divisor):
+	return dividend / divisor
+
+print("myModulepy: ", __name__) // in case it was runned it will be called as main, however 
+if it wasn't then it will called as utils
+
+// main.py
+
+from utils import divide 
+
+
+
+print(divide(10, 2))
+
+
+	 

@@ -1,0 +1,51 @@
+ apps file: 
+	gives it a name based on the
+	file app name
+
+models.py:
+	is important when you start adding
+	data models to your app
+
+tests.py helps in unit testing:
+	and automated tests
+
+what will matter is the views.py
+	file because that actully when
+	we will start writing some logic
+
+Url file in the project is important since
+We will control which routes, and which url 
+website support
+
+// what is view?
+
+int the simplist form its just a python function
+
+there you might have a funcion called index (name of starting html..) // you can name it anything
+
+in that function you need to respond to the browser...
+that tell to the browser what to display on the screen
+the function will be called manually by Django
+
+\*
+	the index function will be invoked automatically when have an incoming
+	request for a certain Url, so we must return an http response
+	
+	it also takes an request arguement
+	every app should have its own Urls that belongs to the app
+	and then we can connect them all the global project app
+	
+	there in app url we should have a variable exactly named
+	"urlpatterns"
+	assigned to it a list
+	inside of the list
+	should have a path() that has been imported form django.urls
+	calling path returns a urlpatterns object here
+	
+	it takes to args
+	path('meetups') # this path should be active if our-domain.com/meetups is requested
+	after importing my views module we can point at method in that module
+	path('meetups', views.index) adding a slash is a good idea
+	at last you should go to the project and add your app
+	in settings there is Installed Apps
+*\

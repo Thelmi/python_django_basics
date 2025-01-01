@@ -1,0 +1,36 @@
+numbers = [1, 3, 5]
+
+doubled = []
+
+for num in numbers:
+	doubled.append(num * 2) // either this or
+	
+print(doubled)
+
+list comprhention
+
+numbers = [1, 3, 5]
+
+doubled = [x * 2 for x in numbers] // or this
+
+print(doubled)
+
+// for loop
+friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
+
+starts_s = []
+
+for friend in friends:
+	if friend.startswith("S"): either this or
+		starts_s.append(friend)
+		
+print(friends)
+print(starts_s)
+
+friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
+
+starts_s = [friend for friend in friends if friend.startswith('S')] // if statement the last
+		
+print(friends)
+print(starts_s)
+

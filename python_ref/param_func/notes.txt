@@ -1,0 +1,20 @@
+
+// examples of functions with positional params
+
+def say_hello(name):
+	print(f"Hello, {name}")
+
+say_hello("Bob")
+def add(x, y):
+	result = x + y
+	print(result);
+
+add(5 , 4)
+
+// examples of functions with named arguements
+
+
+def say_hello(name, surname):
+	print(f"Hello, {name} {surname}")
+	
+say_hello(surname="Helmy", name="Taha")

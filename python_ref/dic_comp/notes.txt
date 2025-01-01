@@ -1,0 +1,26 @@
+
+# users = [
+# 	(0, "taffy","taffytales"),
+# 	(1, "Taha", "hero7oAl"),
+# 	(2, "Tahab", "$$"),
+# 	(3,"Maaz","Madiha")
+# ]
+
+# users_map = {user[1]: user for user in users} // similar to
+
+users_map = {} /// same like above
+
+for user in users
+	user_map[user[1]] = user /// same like above
+
+
+
+# user_sign_in = input("Username: ")
+# Password_sign_in = input("Password: ")
+
+# _, username, password = users_map[user_sign_in] // destructing the tuple
+
+# if (password == "Hello"):
+# 	print("Welcome back sir")
+# else:
+# 	print("oops, your details aren't correct, try again!")

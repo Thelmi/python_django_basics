@@ -1,0 +1,15 @@
+
+
+name = input("Enter your name: "); // read input
+
+print(name); // print it
+
+// input function always gives back a string
+
+name = input("How big is your house (in square feet): ");
+
+square_feet = int(name) // atoi umm
+
+square_meters = square_feet / 10.8 // '/' result always will be a float
+
+print(f"{square_feet} square feet is {square_meters:.2f} square meteres") fstr :.2f only 2 decimal num show
