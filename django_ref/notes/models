@@ -14,3 +14,21 @@ order them
 
 and no sql code 
 which you have to write
+
+// actual code
+
+class Meetup(models.Model): // Model is the base class 
+
+	title = models.CharField(max_length=200)
+/* name of the coloumn title it expect text and max length
+is 200
+*/
+
+slug = models.SlugField(unique=True)
+/*
+	no space.. no two rows in the database can have the same value in the slug field.
+*/
+description = models.TextField()
+/*
+	for longer text text 
+*/
