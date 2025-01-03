@@ -4,3 +4,20 @@
 // using with to make pass value to the args value...
 
 {% include 'meetups/includes/meetup-item.html' with title=meetup_item.title location=meetup_item.location %}
+
+<li class="meetup-item">
+	<article>
+		<div class="meetup-image">
+			<img src="" alt="">
+		</div>
+		<div class="meetup-details">
+			<h3>{{title}}</h3>
+			<address>
+				{{location}}
+			</address>
+		</div> 
+		<div class="meetup-actions">
+			<a href="{% url 'meetup-detail' slug %}" class="btn">More Details</a>
+		</div>
+	</article>	
+</li>

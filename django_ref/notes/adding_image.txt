@@ -1,0 +1,47 @@
+// how to add an image field
+
+image = models.ImageField(upload_to='images')
+
+/*
+	behind the scenes 
+	it will take an uploaded file store it somewhere on
+	the hard drive... we can defined where it should be
+	stored and then it will just store a refrence
+	basically the path of the file on your hard drive 
+	in the database. its not the uploaded file that will 
+	be stored,
+	but just a pointer to that file 
+	you should not store intire files in a database
+	that is not what database is optimized for
+*/
+
+/*
+	imagine having a bigger project and you have different
+	kinds of files that can be uploaded
+	for different models... pdf documents... Images...
+	then you typically dont want to store them all into
+	the same folder but you might have one root upload 
+	folder and then you have sub folders like images
+	inside of that root folder where the uploaded file
+	get stored in
+*/
+// configuration in project settings
+
+MEDIA_ROOT = BASE_DIR  // its a variable defind in
+					   // in project settings.py
+					   // absolute path to overall project
+
+MEDIA_ROOT = BASE_DIR / 'uploads' 
+// '/' says to be sub folder and all files go to that sub folder
+
+MEDIA_URL = '/files/' 
+						// this will be simply as the url 
+						// under which this files are served
+						
+
+/*
+	uploaded but not served 
+*/
+
+difference between static files css.. extra
+and 

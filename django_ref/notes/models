@@ -32,3 +32,15 @@ description = models.TextField()
 /*
 	for longer text text 
 */
+
+// A command it will trigger djan go to create the database structure 
+
+/*
+	migrations are database instructions and with make migrations
+	** python3 manage.py makemigrations
+	you generate those instructions and you will find it in ur folder
+	
+	after you need to take this instructions and to execute them using Django
+	** python3 manage.py migrate
+	
+*/

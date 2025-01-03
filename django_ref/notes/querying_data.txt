@@ -1,0 +1,49 @@
+
+// so before querying data and having only dummy data
+
+/*
+	from django.shortcuts import render
+	
+	def index(request):
+	meetups = [
+	{
+		"title": "A First Meetup",
+		"location": "New York",
+		"slug": "a-first-meetup"
+	},
+	{
+		"title": "A Second Meetup",
+		"location": "Paris",
+		"slug": "a-second-meetup"
+	},
+	]
+	return render(request, "meetups/index.html", {
+		"show_meeting" : False,
+		"meetups": meetups
+		})
+*/
+
+// after querying data
+
+/*
+	from django.shortcuts import render
+	from .model import Meetup
+	meetups = Meetup.objects.all()
+	return render(request, "meetups/index.html", {
+		"show_meeting" : False,
+		"meetups": meetups
+		})
+*/
+
+// meetup.object 
+
+// assigning meetup as a manager, building a static field 
+	giving us a rich methods and queries
+	
+/*
+	e.g
+	meetups = Meetup.objects.all() // retrieve or fetch 
+									//	all the data
+	e.g 
+	selected_meetup = Meetup.objects.get(slug=meetup_slug) only the data that has this slug = meet_slug True
+*/

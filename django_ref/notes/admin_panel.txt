@@ -1,0 +1,19 @@
+
+// admin panel
+
+you can find path to the admin in the urls of the project
+
+to build an admin user and password comand:
+
+**python3 manage.py createsuperuser
+
+to have a meetup area in the admin panel
+/*
+	
+	from django.contrib import admin
+	from .models import Meetup       // . for this folder
+
+	# Register your models here.
+
+	admin.site.register(Meetup)     // for registering
+*/
