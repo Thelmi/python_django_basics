@@ -1,0 +1,24 @@
+// example of participant 
+
+class Participant(models.Model):
+	email =  models.EmailField(unique=True)
+
+	def __str__(self):
+		return self.email
+
+// its many to many because one meetup can have many Participant
+and one participant can have many meetups
+
+/* participant = models.ManyToManyField(Participant, )
+	Django will treat an extra table, 
+	a matching table between these two models you could say
+	where one row is added per relation
+	
+	Note: that we dont need to have any related records at
+	all because initially a meetup has no participant
+	
+	participant = models.ManyToManyField(Participant, blank=True )
+	
+	This will ensure that if a new entry is added, through
+	the admin dashboard, for example, 
+*/

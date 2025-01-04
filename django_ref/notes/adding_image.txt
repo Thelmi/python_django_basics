@@ -44,4 +44,19 @@ MEDIA_URL = '/files/'
 */
 
 difference between static files css.. extra
-and 
+and or telling python to serve some files statically
+
+/*
+	static files we as a developers we add them in advance
+	to serve some files are added by admin or user at a
+	runtime
+*/
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include("meetups.urls")),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

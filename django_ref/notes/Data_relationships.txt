@@ -1,0 +1,19 @@
+
+//one to many is the same as many to one
+
+/*  Three kinds of relationship
+	
+	one to many: one book as one author, one author wrote
+	multiple books
+	
+	one to one: one author has one address, one address
+	belongs to one author
+	
+	many to many: A book can be published in many countries
+	a country can publish many books
+*/
+
+// in location example its one to many
+
+because on location can belong to many meetups 
+but one meetup will only have one location

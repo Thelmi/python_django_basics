@@ -12,7 +12,7 @@
 			<h2>Upcoming Meetups</h2>
 			<ol>
 				{% for meetup_item in meetups%}
-					{% include 'meetups/includes/meetup-item.html' with title=meetup_item.title location='abudhabi' slug=meetup_item.slug %}
+					{% include 'meetups/includes/meetup-item.html' with title=meetup_item.title image=meetup_item.images.url location='abudhabi' slug=meetup_item.slug %}
 				{% endfor %}
 			</ol>
 		</section>

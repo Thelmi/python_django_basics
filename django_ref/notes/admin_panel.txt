@@ -17,3 +17,19 @@ to have a meetup area in the admin panel
 
 	admin.site.register(Meetup)     // for registering
 */
+
+// config admin\
+
+/*
+
+class MeetupAdmin(admin.ModelAdmin): // the arguement must be a ModelAdmin class 
+	list_display = ('title', 'slug') // setting different culoums name in tuple
+									 // assigned into list_display
+	list_filter = ('title',)         // give you the option to filter
+	prepopulated_fields = {'slug': ('title',)} // while writting the title
+												// it will put the same text 
+												// in the slug auto, while 
+												// respecting the rules
+	admin.site.register(Meetup, MeetupAdmin)
+
+*/
