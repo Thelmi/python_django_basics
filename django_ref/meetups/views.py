@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Meetup
+from .forms import RegisterationForm
 # Create your views here.
 
 def index(request):
@@ -10,12 +11,16 @@ def index(request):
 
 def meetup_details(request, meetup_slug):
 	try:
-		selected_meetup = Meetup.objects.get(slug=meetup_slug)
-		return render(request, "meetups/meetups-details.html", {
-		'meetup_found': True,
-		'meetup_title': selected_meetup.title,
-		'meetup_description': selected_meetup.description
-		})
+		if request.method == 'GET':
+			selected_meetup = Meetup.objects.get(slug=meetup_slug)
+			registration_form = RegisterationForm()
+			return render(request, "meetups/meetups-details.html", {
+			'meetup_found': True,
+			'meetup': selected_meetup,
+			'form': registration_form
+			})
+		else:
+			registration_form = RegisterationForm(request.POST) 
 	except Exception as exc:
 		return render(request,"meetups/meetups-details.html", {
 		'meetup_found': False

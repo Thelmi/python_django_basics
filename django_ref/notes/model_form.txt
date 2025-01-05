@@ -1,0 +1,57 @@
+// import form from django
+
+// use forms.ModelForm as an arguement
+
+// and then we can call a nested Meta class, its a default 
+// python feature
+
+class RegistrationForm(forms.ModelForm):
+	class Meta:
+		model = Particpant
+		fields = ['email']
+
+/*
+	we can make model = Particpant
+	to the model I want to connect with
+*/
+
+// after that you need just to add to ur view
+
+/*
+	from .forms import RegisterationForm
+	
+	def meetup_details(request, meetup_slug):
+	try:
+		selected_meetup = Meetup.objects.get(slug=meetup_slug)
+		registration_form = RegisterationForm()
+		return render(request, "meetups/meetups-details.html", {
+		'meetup_found': True,
+		'meetup': selected_meetup,
+		'form': registration_form
+		})
+	except Exception as exc:
+		return render(request,"meetups/meetups-details.html", {
+		'meetup_found': False
+		})
+*/
+/*
+	// how to assign an object of ur class
+	
+	from .forms import RegisterationForm
+	registration_form = RegisterationForm()
+	
+	// how to send a key to the template
+
+	'form': registration_form
+	
+	// in the template it self 
+	// you can use this or this 
+	
+	{{form.as_ul}} // this or this (as ul)
+	{{form.as_p}} // this or this (as p)
+	
+	// are method on this form object..
+	// fun fact no need pranthesis for methods
+	// DTL (Django template language)
+*/
+

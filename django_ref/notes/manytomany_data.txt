@@ -19,6 +19,9 @@ and one participant can have many meetups
 	
 	participant = models.ManyToManyField(Participant, blank=True )
 	
+	blank=True, can be used in any field and it allows it to be empty
+	
 	This will ensure that if a new entry is added, through
-	the admin dashboard, for example, 
+	the admin dashboard, for example, the input there in the
+	forum maybe empty
 */
