@@ -75,3 +75,37 @@ input and maybe return this template again
 but also if the form validation succeeds, save that data
 to the database and redirect the user to some confirmation
 page, which we have yet to add 
+
+try:
+		if request.method == 'GET':
+			selected_meetup = Meetup.objects.get(slug=meetup_slug)
+			registration_form = RegisterationForm()
+			return render(request, "meetups/meetups-details.html", {
+			'meetup_found': True,
+			'meetup': selected_meetup,
+			'form': registration_form
+			})
+		else:
+			registration_form = RegisterationForm(request.POST) 
+
+// get is the default,
+however from the form we sent a post one 
+
+so we send a post request to the form class
+
+if registration_form.is_valid():
+			registration_form.save()
+
+is_valid() checks if the email is valid
+
+saves in the database a new entry
+.save()
+
+//  note: we will only be able to save an email address ones
+across all meetups, we will fine tune it later
+
+patricipant = registration_form.save()
+
+return the participant saved 
+
+selected_meetup.participants.add(participant)

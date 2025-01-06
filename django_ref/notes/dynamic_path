@@ -13,3 +13,23 @@ path("meetups/<slug:meetup_slug>/", views.meetup_details, name='meetup-detail') 
 
 and then use 'URL keyword'
 <a href="{% url 'meetup-detail' meetup_item.slug %}" class="btn">More Details</a>
+
+// in Url.py do the dynamic path the last
+
+// this is better than this
+
+// this is not correct because succes might be in the slug url
+
+/* 
+path("meetups/<slug:meetup_slug>/", views.meetup_details, name='meetup-detail')
+path("meetups/success", views.confirm_registration, name='registration-success')
+*/
+
+correct is to put it, in this order
+
+/*
+
+path("meetups/success", views.confirm_registration, name='registration-success')
+path("meetups/<slug:meetup_slug>/", views.meetup_details, name='meetup-detail')
+
+*/

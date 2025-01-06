@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # type: ignore
 
 # Create your models here.
 
@@ -11,7 +11,6 @@ class Location(models.Model):
 
 class Participant(models.Model):
 	email =  models.EmailField(unique=True)
-
 	def __str__(self):
 		return self.email
 
