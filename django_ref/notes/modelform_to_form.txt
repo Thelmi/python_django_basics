@@ -1,0 +1,13 @@
+// .save()
+/*
+	if registration_form.is_valid():
+			participant = registration_form.save()
+			selected_meetup.participant.add(participant)
+			return redirect("confirm-registration")
+
+	class Participant(models.Model):
+	email =  models.EmailField(unique=True)
+	def __str__(self):
+		return self.email
+
+*/
