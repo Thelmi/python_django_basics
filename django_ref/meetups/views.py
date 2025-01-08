@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect # type: ignore
-from .models import Meetup
+from .models import Meetup, Participant
 from .forms import RegisterationForm
 
 # Create your views here.
@@ -18,7 +18,8 @@ def meetup_details(request, meetup_slug):
 		else:
 			registration_form = RegisterationForm(request.POST)
 		if registration_form.is_valid():
-			participant = registration_form.save()
+			user_email = registration_form.cleaned_data['email']
+			participant, _ = Participant.objects.get_or_create(email=user_email)
 			selected_meetup.participant.add(participant)
 			return redirect("confirm-registration")
 		return render(request, "meetups/meetups-details.html", {

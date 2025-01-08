@@ -1,3 +1,7 @@
+
+
+
+
 // .save()
 /*
 	if registration_form.is_valid():
@@ -9,5 +13,25 @@
 	email =  models.EmailField(unique=True)
 	def __str__(self):
 		return self.email
-
 */
+
+// .cleaned_data
+/*
+	user_email = registration_form.cleaned_data['email']
+	participant, _ = Participant.objects.get_or_create(email=user_email)
+*/
+
+/*
+selected_meetup = Meetup.objects.get(slug=meetup_slug)
+		if request.method == 'GET': // this is the get request
+			registration_form = RegisterationForm() // this is the form object with the data (GET)
+		else: // this is the post request
+			registration_form = RegisterationForm(request.POST) // this is the form object with the data (POST)
+		if registration_form.is_valid(): // check if the form is valid depending on the fields in the form
+			user_email = registration_form.cleaned_data['email'] // get the email from the form 
+			participant, _ = Participant.objects.get_or_create(email=user_email) // get the participant from the database or create it if it doesn't exist (return a tuple)
+			selected_meetup.participant.add(participant) // add the participant to the meetup (add the participant to the meetup, add the participant to the meetup, its smart enough to know that the participant is in the database or not)
+			return redirect("confirm-registration") // redirect to the confirm registration page
+*/
+
+
